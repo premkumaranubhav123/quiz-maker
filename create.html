@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz - Online Quiz Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="create.html">Create Quiz</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <button onclick="logout()">Logout</button>
+        <button id="theme-toggle">Toggle Theme</button>
+    </nav>
+    <div class="container">
+        <h1>Create a Quiz</h1>
+        <form id="quiz-form">
+            <label for="quiz-title">Quiz Title:</label>
+            <input type="text" id="quiz-title" placeholder="Enter quiz title" required>
+            <label for="quiz-category">Category:</label>
+            <select id="quiz-category" required>
+                <option value="General">General</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+            </select>
+            <label for="quiz-time">Time Limit (seconds):</label>
+            <input type="number" id="quiz-time" min="10" value="30" required>
+            <div id="questions-container"></div>
+            <button type="button" id="add-question">Add Question</button>
+            <button type="submit" id="save-quiz">Save Quiz</button>
+        </form>
+        <p id="message" style="color: green;"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
